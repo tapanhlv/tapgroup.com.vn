@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chính sách bảo mật — Tường An Phát Group</title>
+  <title>Chính sách bảo mật — Công ty Cổ phần Tường An Phát Group</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">
-    <span>Tường An Phát Group</span>
-  </div>
-  <div class="nav-links">
+  <div class="nav-logo">TAP<span>.</span>GROUP</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
     <a href="index.html#about">Giới thiệu</a>
-    <a href="index.html#policies">Chính sách</a>
     <a href="index.html#contact">Liên hệ</a>
+    <a href="privacy-policy.html">Chính sách bảo mật</a>
+    <a href="terms.html">Điều khoản sử dụng</a>
+    <a href="warranty-policy.html">Chính sách bảo hành</a>
+    <a href="return-policy.html">Chính sách đổi trả</a>
   </div>
 </nav>
+<script>
+  const t = document.getElementById('navToggle');
+  const m = document.getElementById('navLinks');
+  t.onclick = () => { t.classList.toggle('open'); m.classList.toggle('open'); };
+</script>
 
 <div class="policy-page">
   <a href="index.html" class="back-link">← Trang chủ</a>
@@ -77,42 +86,41 @@
   <p>
     <strong>Công ty Cổ phần Tường An Phát Group</strong><br>
     Địa chỉ: TT05-Lô 7, Dự án Khu nhà ở cho CBNV Văn phòng Trung ương Đảng Và Báo Nhân dân, Đường Trịnh Văn Bô, Phường Xuân Phương, TP Hà Nội, Việt Nam<br>
-    Email: contact@tapgroup.com.vn
+    Email: info@tapgroup.com.vn
   </p>
 </div>
 
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <div class="brand-name">Tường An Phát Group</div>
-      <div class="brand-tagline">Uy tín — Chất lượng — Tận tâm</div>
-      <p style="margin-top:12px; font-size:.82rem; color:rgba(255,255,255,.45)">MST: 0110156137</p>
-    </div>
-    <div class="footer-col">
-      <h4>Thông tin</h4>
-      <ul>
-        <li><a href="index.html#about">Giới thiệu</a></li>
-        <li><a href="index.html#contact">Liên hệ</a></li>
-      </ul>
+      <div class="brand-name">CÔNG TY CỔ PHẦN TƯỜNG AN PHÁT GROUP</div>
+      <div class="brand-info">
+        <p><span>Mã số thuế:</span> 0110156137</p>
+        <p><span>Do Sở Tài Chính Thành Phố Hà Nội cấp:</span> 20/10/2022</p>
+        <p><span>Địa chỉ đăng ký:</span> TT05-Lô 7, Dự án Khu nhà ở cho CBNV Văn phòng Trung ương Đảng Và Báo Nhân dân, Đường Trịnh Văn Bô, Phường Xuân Phương, Thành phố Hà Nội, Việt Nam</p>
+        <p><span>Số điện thoại:</span> 0982.872.088</p>
+        <p><span>Email:</span> info@tapgroup.com.vn</p>
+        <p><span>Website:</span> tapgroup.com.vn</p>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Chính sách</h4>
       <ul>
         <li><a href="privacy-policy.html">Chính sách bảo mật</a></li>
         <li><a href="terms.html">Điều khoản sử dụng</a></li>
+        <li><a href="warranty-policy.html">Chính sách bảo hành</a></li>
+        <li><a href="return-policy.html">Chính sách đổi trả</a></li>
       </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Kết nối</h4>
-      <div class="social-icons">
-        <a href="#" class="social-icon" title="Facebook"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        <a href="#" class="social-icon" title="TikTok"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg></a>
-      </div>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2025 Công ty Cổ phần Tường An Phát Group. All rights reserved.</span>
-    <span><a href="privacy-policy.html">Chính sách bảo mật</a> &nbsp;·&nbsp; <a href="terms.html">Điều khoản sử dụng</a></span>
+    <span>
+      <a href="privacy-policy.html">Bảo mật</a> &nbsp;·&nbsp;
+      <a href="terms.html">Điều khoản</a> &nbsp;·&nbsp;
+      <a href="warranty-policy.html">Bảo hành</a> &nbsp;·&nbsp;
+      <a href="return-policy.html">Đổi trả</a>
+    </span>
   </div>
 </footer>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tường An Phát Group</title>
+  <title>Công ty Cổ phần Tường An Phát Group</title>
   <meta name="description" content="Công ty Cổ phần Tường An Phát Group — MST: 0110156137 — Hà Nội, Việt Nam" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,169 +11,226 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">
-    <span>Tường An Phát Group</span>
-  </div>
-  <div class="nav-links">
-    <a href="#about">Giới thiệu</a>
-    <a href="#policies">Chính sách</a>
-    <a href="#contact">Liên hệ</a>
+  <div class="nav-logo">TAP<span>.</span>GROUP</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="privacy-policy.html">Chính sách bảo mật</a>
+    <a href="terms.html">Điều khoản sử dụng</a>
+    <a href="warranty-policy.html">Chính sách bảo hành</a>
+    <a href="return-policy.html">Chính sách đổi trả</a>
   </div>
 </nav>
+<script>
+  const t = document.getElementById('navToggle');
+  const m = document.getElementById('navLinks');
+  t.onclick = () => { t.classList.toggle('open'); m.classList.toggle('open'); };
+  function closeNav() { t.classList.remove('open'); m.classList.remove('open'); }
+</script>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>Công ty Cổ phần<br>Tường An Phát Group</h1>
-  <p>Chúng tôi cam kết mang đến sản phẩm và dịch vụ chất lượng cao, đáp ứng nhu cầu của khách hàng trên toàn quốc.</p>
-  <a href="#contact" class="btn">Liên hệ với chúng tôi</a>
+<div class="hero-split">
+  <div class="hero-text">
+    <div class="hero-label">Thời trang nữ cao cấp</div>
+    <h1>
+      Phong cách <strong>của riêng</strong> <em>bạn</em>
+    </h1>
+    <p>TAP GROUP mang đến những thiết kế thời trang nữ tinh tế, hiện đại — tôn vinh vẻ đẹp và cá tính của người phụ nữ Việt Nam.</p>
+  </div>
+  <div class="hero-image">
+    <img src="images/hero.jpg" alt="Thời trang nữ" />
+  </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-label">Về chúng tôi</div>
-  <h2>Tường An Phát Group</h2>
-  <p class="lead">Công ty Cổ phần Tường An Phát Group là doanh nghiệp hoạt động trong lĩnh vực thương mại điện tử và phân phối sản phẩm tiêu dùng tại Việt Nam.</p>
+<!-- COLLECTION (no nav link, just visual) -->
+<div class="section-wrap" id="collection">
+  <div class="section-title"><span>ĐA DẠNG</span> SẢN PHẨM</div>
+  <div class="section-underline"></div>
 
-  <div class="about-grid">
-    <div class="info-card">
-      <h3>Thông tin doanh nghiệp</h3>
-      <div class="info-row">
-        <span>Tên công ty</span>
-        <span>Công ty Cổ phần Tường An Phát Group</span>
+  <div class="collection-grid">
+    <div class="collection-item tall">
+      <img src="images/collection-1.jpg" alt="Thời trang nữ 1" />
+      <div class="collection-overlay"><span>Đầm dạo phố</span></div>
+    </div>
+    <div class="collection-col">
+      <div class="collection-item">
+        <img src="images/collection-2.jpg" alt="Thời trang nữ 2" />
+        <div class="collection-overlay"><span>Áo kiểu</span></div>
       </div>
-      <div class="info-row">
-        <span>Mã số thuế</span>
-        <span>0110156137</span>
+      <div class="collection-item">
+        <img src="images/collection-3.jpg" alt="Thời trang nữ 3" />
+        <div class="collection-overlay"><span>Set công sở</span></div>
       </div>
-      <div class="info-row">
-        <span>Loại hình</span>
-        <span>Công ty Cổ phần</span>
+    </div>
+    <div class="collection-item tall">
+      <img src="images/collection-4.jpg" alt="Thời trang nữ 4" />
+      <div class="collection-overlay"><span>Váy dự tiệc</span></div>
+    </div>
+    <div class="collection-item tall">
+      <img src="images/collection-5.jpg" alt="Quần jean nữ" />
+      <div class="collection-overlay"><span>Quần jean</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- BRAND STORY -->
+<div class="section-wrap story-wrap">
+  <div class="story-grid">
+    <div class="story-image">
+      <img src="images/story.jpg" alt="Câu chuyện thương hiệu" />
+    </div>
+    <div class="story-text">
+      <div class="section-label-sm">Câu chuyện của chúng tôi</div>
+      <div class="section-title"><span>TAP</span> GROUP</div>
+      <div class="section-underline"></div>
+      <p>Được thành lập với niềm đam mê thời trang nữ và khao khát mang đến vẻ đẹp tinh tế cho người phụ nữ Việt Nam hiện đại, TAP GROUP không ngừng chắt lọc những thiết kế chất lượng cao — nơi phong cách gặp gỡ sự tự tin.</p>
+      <p>Chúng tôi tin rằng mỗi người phụ nữ đều xứng đáng có một phong cách riêng — và sứ mệnh của chúng tôi là giúp bạn tìm thấy điều đó.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SỨ MỆNH / TẦM NHÌN -->
+<div class="section-wrap" id="mission">
+  <div class="mission-grid">
+    <div class="mission-card">
+      <div class="mission-icon">🎯</div>
+      <h3>Sứ mệnh</h3>
+      <p>Mang đến cho phụ nữ Việt Nam những sản phẩm thời trang chất lượng cao, giá trị thật — giúp mỗi người phụ nữ tự tin thể hiện cá tính và phong cách riêng của mình trong cuộc sống hàng ngày.</p>
+    </div>
+    <div class="mission-card accent">
+      <div class="mission-icon">🌟</div>
+      <h3>Tầm nhìn</h3>
+      <p>Trở thành thương hiệu thời trang nữ được tin yêu hàng đầu Việt Nam — nơi chất lượng, phong cách và sự tận tâm hội tụ để tạo nên trải nghiệm mua sắm đáng nhớ cho mọi khách hàng.</p>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">💎</div>
+      <h3>Giá trị cốt lõi</h3>
+      <p>Uy tín trong từng sản phẩm. Chất lượng không thỏa hiệp. Tận tâm với từng khách hàng. Đây là ba giá trị định hướng mọi hoạt động của TAP GROUP.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CAM KẾT -->
+<div class="section-wrap alt" id="commitment">
+  <div class="section-title"><span>CAM KẾT</span> CỦA CHÚNG TÔI</div>
+  <div class="section-underline"></div>
+
+  <div class="commit-grid">
+    <div class="commit-card">
+      <div class="commit-img">
+        <img src="images/commit-1.jpg" alt="Sản phẩm chính hãng" />
       </div>
-      <div class="info-row">
-        <span>Quốc gia</span>
-        <span>Việt Nam</span>
+      <div class="commit-body">
+        <div class="commit-icon">✅</div>
+        <h3>100% Sản phẩm chính hãng</h3>
+        <p>Mọi sản phẩm đều được kiểm định nguồn gốc rõ ràng, đảm bảo chất lượng trước khi đến tay khách hàng.</p>
       </div>
     </div>
 
-    <div class="info-card">
-      <h3>Địa chỉ trụ sở</h3>
-      <div class="info-row">
-        <span>Địa chỉ</span>
-        <span>TT05-Lô 7, Dự án Khu nhà ở cho CBNV Văn phòng Trung ương Đảng Và Báo Nhân dân, Đường Trịnh Văn Bô, Phường Xuân Phương, TP Hà Nội, Việt Nam</span>
+    <div class="commit-card">
+      <div class="commit-img">
+        <img src="images/story.jpg" alt="Bảo hành lỗi sản xuất" />
+      </div>
+      <div class="commit-body">
+        <div class="commit-icon">🛡️</div>
+        <h3>Bảo hành lỗi sản xuất</h3>
+        <p>Cam kết đổi sản phẩm mới hoặc hoàn tiền nếu phát sinh lỗi từ nhà sản xuất trong thời hạn bảo hành.</p>
+      </div>
+    </div>
+
+    <div class="commit-card">
+      <div class="commit-img">
+        <img src="images/commit-3.jpg" alt="Hỗ trợ tận tâm" />
+      </div>
+      <div class="commit-body">
+        <div class="commit-icon">💬</div>
+        <h3>Hỗ trợ khách hàng tận tâm</h3>
+        <p>Đội ngũ tư vấn luôn sẵn sàng hỗ trợ bạn từ lựa chọn sản phẩm đến sau khi mua hàng.</p>
+      </div>
+    </div>
+
+    <div class="commit-card">
+      <div class="commit-img">
+        <img src="images/commit-4.jpg" alt="Thanh toán an toàn" />
+      </div>
+      <div class="commit-body">
+        <div class="commit-icon">🔐</div>
+        <h3>Thanh toán an toàn</h3>
+        <p>Hỗ trợ đa dạng hình thức thanh toán, bảo mật thông tin tuyệt đối theo tiêu chuẩn bảo mật quốc tế.</p>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- POLICIES -->
-<section id="policies">
-  <div class="section-label">Chính sách</div>
-  <h2>Chính sách & Điều khoản</h2>
-  <p class="lead">Chúng tôi minh bạch về cách thu thập và sử dụng dữ liệu, cũng như các điều khoản khi sử dụng dịch vụ của chúng tôi.</p>
+<!-- FAQ -->
+<div class="section-wrap" id="faq">
+  <div class="section-title"><span>CÂU HỎI</span> THƯỜNG GẶP</div>
+  <div class="section-underline"></div>
 
-  <div class="policy-links">
-    <div class="policy-card">
-      <h3>🔒 Chính sách bảo mật</h3>
-      <p>Thông tin về cách chúng tôi thu thập, sử dụng và bảo vệ dữ liệu cá nhân của bạn.</p>
-      <a href="privacy-policy.html">Xem chi tiết →</a>
-    </div>
-    <div class="policy-card">
-      <h3>📄 Điều khoản sử dụng</h3>
-      <p>Các điều khoản và điều kiện áp dụng khi sử dụng sản phẩm và dịch vụ của chúng tôi.</p>
-      <a href="terms.html">Xem chi tiết →</a>
-    </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Sản phẩm có chính hãng không?</summary>
+      <p>100% sản phẩm tại TAP GROUP đều có nguồn gốc rõ ràng, được kiểm định chất lượng trước khi đến tay khách hàng. Chúng tôi cam kết không kinh doanh hàng giả, hàng nhái.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Thời gian giao hàng bao lâu?</summary>
+      <p>Giao hàng toàn quốc trong 2–5 ngày làm việc tùy khu vực. Nội thành Hà Nội thường nhận hàng trong 1–2 ngày.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Tôi có thể đổi size sau khi mua không?</summary>
+      <p>Chúng tôi hỗ trợ đổi size trong vòng 7 ngày kể từ khi nhận hàng, với điều kiện sản phẩm chưa qua sử dụng và còn nguyên tem nhãn. Vui lòng liên hệ email để được hướng dẫn.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Chính sách đổi trả như thế nào?</summary>
+      <p>Chúng tôi chấp nhận đổi/trả trong 7 ngày nếu sản phẩm bị lỗi từ nhà sản xuất hoặc giao sai đơn. Xem chi tiết tại <a href="return-policy.html">Chính sách đổi trả</a>.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Có những hình thức thanh toán nào?</summary>
+      <p>Chúng tôi hỗ trợ thanh toán tiền mặt khi nhận hàng (COD), chuyển khoản ngân hàng, và các ví điện tử phổ biến tại Việt Nam.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Công ty được thành lập từ khi nào?</summary>
+      <p>Công ty Cổ phần Tường An Phát Group được thành lập ngày 20/10/2022, đăng ký kinh doanh tại Sở Kế hoạch và Đầu tư TP Hà Nội, mã số thuế 0110156137.</p>
+    </details>
   </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-label">Liên hệ</div>
-  <h2>Liên hệ với chúng tôi</h2>
-  <p class="lead">Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn.</p>
-
-  <div class="contact-grid">
-    <div>
-      <div class="contact-item">
-        <div class="contact-icon">📍</div>
-        <div>
-          <h4>Địa chỉ</h4>
-          <p>TT05-Lô 7, Dự án Khu nhà ở cho CBNV Văn phòng Trung ương Đảng Và Báo Nhân dân, Đường Trịnh Văn Bô, Phường Xuân Phương, TP Hà Nội, Việt Nam</p>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">🏢</div>
-        <div>
-          <h4>Mã số thuế</h4>
-          <p>0110156137</p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="contact-item">
-        <div class="contact-icon">✉️</div>
-        <div>
-          <h4>Email</h4>
-          <p>contact@tapgroup.com.vn</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-main">
-    <!-- Cột 1: Brand -->
     <div class="footer-brand">
-      <div class="brand-name">Tường An Phát Group</div>
-      <div class="brand-tagline">Uy tín — Chất lượng — Tận tâm</div>
-      <p>Công ty Cổ phần Tường An Phát Group hoạt động trong lĩnh vực thương mại và phân phối sản phẩm tiêu dùng tại Việt Nam.</p>
-      <p style="margin-top:12px; font-size:.82rem; color:rgba(255,255,255,.45)">MST: 0110156137</p>
+      <div class="brand-name">CÔNG TY CỔ PHẦN TƯỜNG AN PHÁT GROUP</div>
+      <div class="brand-info">
+        <p><span>Mã số thuế:</span> 0110156137</p>
+        <p><span>Do Sở Tài Chính Thành Phố Hà Nội cấp:</span> 20/10/2022</p>
+        <p><span>Địa chỉ đăng ký:</span> TT05-Lô 7, Dự án Khu nhà ở cho CBNV Văn phòng Trung ương Đảng Và Báo Nhân dân, Đường Trịnh Văn Bô, Phường Xuân Phương, Thành phố Hà Nội, Việt Nam</p>
+        <p><span>Số điện thoại:</span> 0982.872.088</p>
+        <p><span>Email:</span> info@tapgroup.com.vn</p>
+        <p><span>Website:</span> tapgroup.com.vn</p>
+      </div>
     </div>
-
-    <!-- Cột 2: Thông tin -->
-    <div class="footer-col">
-      <h4>Thông tin</h4>
-      <ul>
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-      </ul>
-    </div>
-
-    <!-- Cột 3: Chính sách -->
     <div class="footer-col">
       <h4>Chính sách</h4>
       <ul>
         <li><a href="privacy-policy.html">Chính sách bảo mật</a></li>
         <li><a href="terms.html">Điều khoản sử dụng</a></li>
+        <li><a href="warranty-policy.html">Chính sách bảo hành</a></li>
+        <li><a href="return-policy.html">Chính sách đổi trả</a></li>
       </ul>
     </div>
-
-    <!-- Cột 4: Mạng xã hội -->
-    <div class="footer-col">
-      <h4>Kết nối</h4>
-      <div class="social-icons">
-        <a href="#" class="social-icon" title="Facebook">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="#" class="social-icon" title="TikTok">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
-        </a>
-        <a href="#" class="social-icon" title="Zalo">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9V9h2v8zm4 0h-2V9h2v8z"/></svg>
-        </a>
-      </div>
-    </div>
   </div>
-
   <div class="footer-bottom">
     <span>© 2025 Công ty Cổ phần Tường An Phát Group. All rights reserved.</span>
     <span>
-      <a href="privacy-policy.html">Chính sách bảo mật</a> &nbsp;·&nbsp;
-      <a href="terms.html">Điều khoản sử dụng</a>
+      <a href="privacy-policy.html">Bảo mật</a> &nbsp;·&nbsp;
+      <a href="terms.html">Điều khoản</a> &nbsp;·&nbsp;
+      <a href="warranty-policy.html">Bảo hành</a> &nbsp;·&nbsp;
+      <a href="return-policy.html">Đổi trả</a>
     </span>
   </div>
 </footer>
 
 </body>
+<!-- tapanhlv (anhlv@tapgroup.com.vn) -->
 </html>
