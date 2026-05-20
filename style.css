@@ -1,0 +1,122 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #1e3a5f;
+  --accent: #c9a227;
+  --text: #222;
+  --muted: #666;
+  --bg: #fff;
+  --bg-alt: #f7f8fa;
+  --border: #e5e7eb;
+  --radius: 8px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--accent); }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; }
+.nav-logo img { height: 38px; }
+.nav-logo span { color: #fff; font-weight: 700; font-size: 1.05rem; letter-spacing: .3px; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: rgba(255,255,255,.85); font-size: .95rem; transition: color .2s; }
+.nav-links a:hover { color: var(--accent); }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 60%, #2a5298);
+  color: #fff;
+  padding: 96px 5% 80px;
+  text-align: center;
+}
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.25; margin-bottom: 16px; }
+.hero p { font-size: 1.15rem; color: rgba(255,255,255,.8); max-width: 620px; margin: 0 auto 36px; }
+.btn {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  padding: 12px 32px; border-radius: 4px;
+  font-weight: 600; font-size: 1rem;
+  transition: opacity .2s;
+}
+.btn:hover { opacity: .88; color: #fff; }
+
+/* ── SECTIONS ── */
+section { padding: 72px 5%; }
+section:nth-child(even) { background: var(--bg-alt); }
+
+.section-label {
+  font-size: .8rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+}
+h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); color: var(--primary); margin-bottom: 20px; }
+.lead { font-size: 1.05rem; color: var(--muted); max-width: 680px; margin-bottom: 36px; }
+
+/* ── ABOUT ── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+@media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } }
+
+.info-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+}
+.info-card h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 16px; }
+.info-row { display: flex; gap: 10px; margin-bottom: 12px; font-size: .95rem; }
+.info-row span:first-child { color: var(--muted); min-width: 80px; }
+.info-row span:last-child { font-weight: 500; }
+
+/* ── POLICIES ── */
+.policy-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.policy-card {
+  flex: 1; min-width: 220px;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; transition: box-shadow .2s;
+}
+.policy-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+.policy-card h3 { color: var(--primary); margin-bottom: 8px; }
+.policy-card p { color: var(--muted); font-size: .9rem; margin-bottom: 16px; }
+.policy-card a { font-weight: 600; color: var(--accent); }
+
+/* ── CONTACT ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+@media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
+.contact-icon { font-size: 1.4rem; margin-top: 2px; }
+.contact-item h4 { color: var(--primary); font-size: .9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.contact-item p { color: var(--muted); font-size: .95rem; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--primary); color: rgba(255,255,255,.7);
+  text-align: center; padding: 28px 5%;
+  font-size: .88rem;
+}
+footer a { color: rgba(255,255,255,.7); }
+footer a:hover { color: var(--accent); }
+
+/* ── POLICY PAGES ── */
+.policy-page { max-width: 780px; margin: 0 auto; padding: 64px 24px; }
+.policy-page h1 { color: var(--primary); font-size: 1.8rem; margin-bottom: 8px; }
+.policy-page .updated { color: var(--muted); font-size: .88rem; margin-bottom: 40px; }
+.policy-page h2 { font-size: 1.15rem; color: var(--primary); margin: 32px 0 10px; }
+.policy-page p, .policy-page li { color: #444; font-size: .97rem; margin-bottom: 12px; }
+.policy-page ul { padding-left: 20px; }
+.policy-page li { margin-bottom: 8px; }
+.back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-weight: 600; margin-bottom: 40px; }
